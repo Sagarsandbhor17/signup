@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    h1{text-align: center;}
+    #card{width:20%;margin:auto;box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;padding:20px}
+    input{display:block;padding:10px;margin:auto;margin-bottom:20px;width:70%;border-radius:15px;}
+    img{display:block;margin:auto;margin-bottom:20px}
+    </style>
+</head>
+<body>
+<img src="https://sso.masaischool.com/brand_dark.svg">
+    <div id="card">
+<h1>Sign In</h1>
+<form id="form">
+<input type="email" id="mail" placeholder="Enter your email">
+<input type="password" id="pass" placeholder="Enter Password">
+<input type="submit" value="LOGIN">
+</form>
+</div>  
+</body>
+</html>
+<script>
+var user=JSON.parse(localStorage.getItem("userdata"));
+document.querySelector("#form").addEventListener("submit",fun1);
+function fun1(){event.preventDefault();
+var x=document.querySelector("#mail").value;
+var y=document.querySelector("#pass").value;
+if(user.email==x&&user.password==y){alert("Login Successful")}
+else{alert("Wrong Email or Password")}
+
+
+
+
+}
+</script>

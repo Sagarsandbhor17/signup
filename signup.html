@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    h1{text-align: center;}
+    #card{width:20%;margin:auto;box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;padding:20px}
+    input{display:block;padding:10px;margin:auto;margin-bottom:20px;width:70%;border-radius:15px;}
+    img{display:block;margin:auto;margin-bottom:20px}
+    </style>
+</head>
+<body>
+<img src="https://sso.masaischool.com/brand_dark.svg">
+    <div id="card">
+<h1>Sign up</h1>
+<form id="form">
+<input type="text" id="name" placeholder="Enter your full name">
+<input type="email" id="mail" placeholder="Enter your email">
+<input type="password" id="pass" placeholder="Enter Password">
+<input type="submit" value="SIGN UP">
+</form>
+    </div>
+    
+</body>
+</html>
+<script>
+document.querySelector("#form"),addEventListener("submit",fun);
+function fun(){
+    event.preventDefault();
+var obj={
+    name:form.name.value,
+    email:form.mail.value,
+    password:form.pass.value}
+    localStorage.setItem("userdata",JSON.stringify(obj));
+window.location.href="login.html"
+
+
+
+
+}
+</script>
